@@ -1,0 +1,19 @@
+{
+  "name": "namaste-world",
+  "version": "1.0.0",
+  "description": "learning react from namaste react",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "chirag-sankhla",
+    "namaste-react"
+  ],
+  "author": "chirag sankhla",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
