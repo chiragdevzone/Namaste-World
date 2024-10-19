@@ -41,7 +41,15 @@ day 1
 
    -> react.production.js: Minified and optimized for performance; no debug info for production use.
 
+8. what is async and defer attributes in script tag?
 
+   -> Normal script tag : first html parsing start executing line by line and as soon as it reaches to execute the script tag then it stops parsing html and start fetching the script files and after that it executes it after completion of execution the html parsing resumes.
+
+   -> Async script tag: first html parsing executes and script files fetched parallely and the successful fetching of script files the html parsing get stoped and start executing the script files. after complete execution the html parsing resumes.
+   This is best for scripts that do not depend on the DOM being fully loaded or on other scripts, such as analytics or ads.
+
+   -> Defer script tag: first html parsing completes successfully and along with this script files get fetched. and after these the script files executes at the end of all. 
+   This is ideal for scripts that need to manipulate the DOM or rely on other scripts, as it ensures everything is ready before they run.
 
 
 
