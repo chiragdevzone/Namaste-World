@@ -1,0 +1,50 @@
+day 1
+
+ 1. what is Emmet?
+  
+  -> "Emmet" is a plugin that helps speed up HTML and CSS coding. It allows you to write shorthand syntax that expands into full code, making the coding process faster and more efficient.
+
+2. Diff b/w library and framework?
+
+   -> The main difference between a library and a framework is the concept of "inversion of control".
+   -> In the library developers holds the control of the project that where it want to use the code, at which section like in navbar or in footer only and rest of the code will remain same.
+   -> Where as in framework the control get reversed and all the control goes under the framework, it stricts developers to develop the project according the structure and rules.
+
+3. What is CDN? Why do we use it?
+
+   -> A CDN (Content Delivery Network) is a network of servers located in various geographical areas that work together to deliver web content to users more efficiently.
+
+   We Use It Because :-
+   -> Faster Load Times: By serving content from the nearest server, CDNs reduce latency and improve loading speeds.
+   -> Increased Reliability: CDNs can handle high traffic volumes and provide redundancy, ensuring content is always available.
+
+4. Why is React known as React?
+
+  -> The name ‘React’ was chosen because the library was designed to allow developers to react to changes in state and data within an application, and to update the user interface in a declarative and efficient manner.
+
+5. What is crossorigin in script tag?
+
+  -> The crossorigin attribute in the script tag enables CrossOrigin Resource Sharing (CORS) for loading external JavaScript files from different origin than the hosting web page. This allows the script to access resources from the server hosting the script, such as making HTTP requests or accessing data.
+
+6. what is diff b/w React and ReactDOM?
+
+   -> React is a library for building user interfaces and defining components.
+
+   -> ReactDOM is a package that handles rendering those components to the web browser's DOM
+
+   In short, React is for building, while ReactDOM is for displaying.
+
+7. What is difference between react.development.js and     
+   react.production.js files via CDN?
+
+   -> react.development.js: Includes debug info and warnings; larger size for development use.
+
+   -> react.production.js: Minified and optimized for performance; no debug info for production use.
+
+
+
+
+
+
+
+
