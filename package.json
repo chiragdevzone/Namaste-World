@@ -1,16 +1,17 @@
 {
-  "name": "day-2-igniting",
+  "name": "namaste-world",
   "version": "1.0.0",
-  "description": "this is day 2 learning npm",
-
+  "description": "learning namaste react",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "keywords": [
-    "day2",
-    "chirag"
+    "chirag",
+    "react",
+    "akshay",
+    "namasteReact"
   ],
   "author": "chirag sankhla",
   "license": "ISC",
@@ -21,8 +22,5 @@
   "devDependencies": {
     "parcel": "^2.12.0",
     "process": "^0.11.10"
-  },
-  "browserlists": ["last 2 versions"]
-  
-
+  }
 }
