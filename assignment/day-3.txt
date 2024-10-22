@@ -1,0 +1,11 @@
+day 3
+
+Q.1 What is JSX?
+    -> JSX is a HTML like syntax which is developed by facebook's react team, it help to make react element which is earlier a very confusing and hard task. as it is html like synatx, we are able to write react element easily.
+    it makes the development easy. to convert jsx to react element there is a package known as babel and it's all managed by the one and only parcel. because we know that parcel is beast. parcel takes the jsx code and give it to the babel responsibility to convert it into react element and futher the react element got rendered and displayed on the web page.
+
+Q.2 Superpowers of JSX.
+
+    -> JSX is html like syntax which makes the developers life easy because they get rid out of writing the pure react element because writing in pure react is a very hard and confusing taks if we talk about the large projects.
+
+    -> JSX help us from cross site scripting. if we access a api and displayed the data on web page and suppose that api holds the malicious data then it gets access to run it in our system due to which it can steal the cookies, read local storage, and can display the false data on the site. jsx helps by senitizing the data before it could run into our app, if there is any malicious data then jsx will skip it and move to the next task.
