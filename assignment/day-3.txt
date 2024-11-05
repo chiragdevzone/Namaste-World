@@ -8,4 +8,26 @@ Q.2 Superpowers of JSX.
 
     -> JSX is html like syntax which makes the developers life easy because they get rid out of writing the pure react element because writing in pure react is a very hard and confusing taks if we talk about the large projects.
 
-    -> JSX help us from cross site scripting. if we access a api and displayed the data on web page and suppose that api holds the malicious data then it gets access to run it in our system due to which it can steal the cookies, read local storage, and can display the false data on the site. jsx helps by senitizing the data before it could run into our app, if there is any malicious data then jsx will skip it and move to the next task.
+    -> JSX help us from cross site scripting. if we access a api and displayed the data on web page and suppose that api holds the malicious data then it gets access to run it in our system due to which it can steal the cookies, read local storage, and can display the false data on the site. jsx helps by senitizing the data before it could run into our app, if there is any malicious data then jsx will escape it and move to the next task.
+
+Q.3 Roles of type attribute in script tag? What options can i use there?
+
+    -> The type attribute in the <script> tag specifies the MIME type ( media type ) of the script. it tells the browser how to interpret the script's content.
+
+    ->The main uses and options for the type attribute are:
+        * text/javascript : Traditional way to specify JavaScript(default).
+        * module : For JavaScript modules, allowing import/export.
+        * application/javascript : Similar to text/javascript.
+        * text/plain : Script content not executed; often for data.
+        * text/template : Used to embed templates in the HTML document.
+        * importmap : To define module paths or aliases in an import map.
+
+Q.4 {TitleComponent} vs <TitleComponent/> vs
+<TitleComponent></TitleComponent> in JSX
+
+    -> these are the three ways to access any component inside the jsx. 
+    ->{TitleComponent}, it is also a component and we are accessing it into another component. as we know that functional component is just a normal js component what returns some jsx or react element. and react element is nothing but a js object. and to run js inside the jsx we use {} 'curley braces'. that why here we use curley braces to execute the TitleComponent inside the jsx.
+
+    -> {<TitleComponent/>},This is a self-closing JSX element that renders the component.
+
+    ->{<TitleComponent></TitleComponent>}, This is a JSX element with explicit open and close tags.
