@@ -26,8 +26,8 @@ Q.4 {TitleComponent} vs <TitleComponent/> vs
 <TitleComponent></TitleComponent> in JSX
 
     -> these are the three ways to access any component inside the jsx. 
-    ->{TitleComponent}, it is also a component and we are accessing it into another component. as we know that functional component is just a normal js component what returns some jsx or react element. and react element is nothing but a js object. and to run js inside the jsx we use {} 'curley braces'. that why here we use curley braces to execute the TitleComponent inside the jsx.
+        * {TitleComponent}, it is also a component and we are accessing it into another component. as we know that functional component is just a normal js component what returns some jsx or react element. and react element is nothing but a js object. and to run js inside the jsx we use {} 'curley braces'. that why here we use curley braces to execute the TitleComponent inside the jsx.
 
-    -> {<TitleComponent/>},This is a self-closing JSX element that renders the component.
+        * {<TitleComponent/>},This is a self-closing JSX element that renders the component.
 
-    ->{<TitleComponent></TitleComponent>}, This is a JSX element with explicit open and close tags.
+        * {<TitleComponent></TitleComponent>}, This is a JSX element with explicit open and close tags.

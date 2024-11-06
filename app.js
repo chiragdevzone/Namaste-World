@@ -1479,7 +1479,6 @@ const restoList = [
 
 const RestroCard = (props) => {
   const { name, cloudinaryImageId, cuisines, avgRating } = props.restroData;
-  console.log(props);
 
   return (
     <div className="card-container">
