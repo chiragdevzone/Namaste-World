@@ -51,3 +51,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+.restro-btn{
+    margin:10px;
+    cursor: pointer;
+}

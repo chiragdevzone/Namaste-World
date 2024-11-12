@@ -1,10 +1,11 @@
-import { LOGO_URL } from "../utils/constants";
+// import { LOGO_URL } from "../utils/constants";
+import * as fixed from "../utils/constants";
 
 const Header = () => {
   return (
     <div className="header-container">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+        <img className="logo" src={fixed.LOGO_URL} />
       </div>
       <div className="link-container">
         <ul>
