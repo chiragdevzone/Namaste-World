@@ -1,39 +1,74 @@
 import RestroCard from "./RestroCard";
-import restoList from "../utils/restoList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
-  const [resturant, setResturant] = useState(restoList);
+  const [resturant, setResturant] = useState([]);
+  const [filteredResturant, setFilteredResturant] = useState([]);
   const [search, setSearch] = useState("");
-  function callSetSearch(e) {
-    setSearch(e.target.value);
-    const filterRestro = restoList.filter(
-      (res) => res.info.name.includes(search) == true
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9124336&lng=75.7872709&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    setResturant(() => filterRestro);
+
+    const jsonData = await data.json();
+
+    const apiData =
+      jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+
+    setResturant(apiData);
+    setFilteredResturant(apiData);
+    console.log("page rendered before filtered data");
+  };
+  if (resturant.length === 0) {
+    return <Shimmer />;
   }
-  console.log(search);
 
   return (
     <div className="body-container">
       <div className="filter">
+        <div className="search-btn">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              const filterRestro = resturant.filter(
+                (res) =>
+                  res.info.name.toLowerCase().includes(search.toLowerCase()) ==
+                  true
+              );
+              setFilteredResturant(filterRestro);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           className="restro-btn"
           onClick={() => {
-            const filterRestro = restoList.filter(
+            const filterRestro = resturant.filter(
               (res) => res.info.avgRating > 4
             );
-            setResturant(filterRestro);
+            setFilteredResturant(filterRestro);
           }}
         >
           Top Rated Resturants
         </button>
       </div>
-      <div>
-        <input type="text" value={search} onChange={callSetSearch} />
-      </div>
+
       <div className="restro-container">
-        {resturant.map((resturant) => {
+        {filteredResturant.map((resturant) => {
           return (
             <RestroCard key={resturant.info.id} restroData={resturant.info} />
           );
