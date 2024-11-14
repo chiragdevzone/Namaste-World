@@ -24,13 +24,14 @@ const Body = () => {
 
     setResturant(apiData);
     setFilteredResturant(apiData);
-    console.log("page rendered before filtered data");
   };
   if (resturant.length === 0) {
     return <Shimmer />;
   }
 
-  return (
+  return resturant.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body-container">
       <div className="filter">
         <div className="search-btn">
