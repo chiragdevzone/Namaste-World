@@ -7,6 +7,7 @@ import RestroInfo from "./components/RestroInfo";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
+import LoginForm from "./components/LoginForm";
 
 const AppLayout = () => {
   return (
@@ -38,6 +39,10 @@ const appRouter = createBrowserRouter(
         {
           path: "/restaurant/:id",
           element: <RestroInfo />,
+        },
+        {
+          path: "/login",
+          element: <LoginForm />,
         },
       ],
       errorElement: <Error />,
