@@ -47,9 +47,9 @@ Q.5 What is difference between Client Side Routing and Server Side Routing ?
 
     -> Client Side Routing : In this Routing when we move from one page to another then the component gots rerender only there is no server call for diff diff pages
 
-    -> Server Side Routing : In this Routing for each page we have to make a server call to accesss. For example : about.html, contact.html etc
+    -> Server Side Routing : In this Routing for each page we have to make a server call to accesss. For example : about.html, contact.html etc.
 
-    
+
 
 
 
