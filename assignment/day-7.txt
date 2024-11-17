@@ -1,0 +1,57 @@
+Q.1 What are various ways to add images into our App? Explain with code examples.
+
+    (i) Adding Local images
+
+         -> store images in your project directory (e.g., in a folder like src/assets).
+
+         -> <img src={localImage} alt="local Example" />
+
+    (ii) Using Remote Image URLs
+
+        -> Fetch and display an image from a URL.
+
+        -> <img src="https://example.com/image.png" alt="Remote Example" />
+
+    (iii) Dynamic Images 
+
+        -> const [image, setImage] = useState("image1.png");
+        <button onClick={()=> setImage("image2.png)}>Change Image </button>
+        <img src={`./assets/${image}`} alt="Dynamic Example" />
+
+    (iv) Using Libraries for Image Management
+
+        -> npm install react-image
+
+        import { Img } from 'react-image';
+
+        <Img src="https://example.com/large-image.png"
+        loader={<p> Loading... </p>}
+        alt="Lazy Loaded Example" />
+Q.2 What would happen if we do console.log(useState())?
+
+    ->If you call console.log(useState()) in a React Component, it will log an array containing two elements:
+
+        (i) Initial state : The current value of the state variable (or the initial value provided when calling useState);
+
+        (ii) State Setter Function : A function that allows you to update the state.
+
+Q.3 How will useEffect behave if we don't add a dependency array ?
+
+    -> If we don't add a dependency array then useEffect will be called on each and every time while rendering of the respective component.
+
+Q.4 What is SPA?
+
+    -> SPA stands for Single Page Application, which means there is no reloading while routing from one page to another, here just component rerendering get placed.
+
+Q.5 What is difference between Client Side Routing and Server Side Routing ?
+
+    -> Client Side Routing : In this Routing when we move from one page to another then the component gots rerender only there is no server call for diff diff pages
+
+    -> Server Side Routing : In this Routing for each page we have to make a server call to accesss. For example : about.html, contact.html etc
+
+    
+
+
+
+
+

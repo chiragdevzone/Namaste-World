@@ -1,16 +1,16 @@
 import { CDN_URL } from "../utils/constants";
+import { RES_IMG_URL } from "../utils/constants";
 
 const RestroCard = (props) => {
   const { name, cloudinaryImageId, cuisines, avgRating } = props.restroData;
 
   return (
     <div className="card-container">
-      <h3>hello world</h3>
       <div>
         <img
           alt="api-img"
           className="food-img"
-          src={CDN_URL + cloudinaryImageId}
+          src={RES_IMG_URL + cloudinaryImageId}
         />
       </div>
 
