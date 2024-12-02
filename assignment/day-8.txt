@@ -1,0 +1,81 @@
+Q.1 How do you create Nested Routes react-router-dom configuration
+
+    -> Steps to create nested Routes
+        (i) Install react-router-dom.
+
+        (ii) Create component for the parent and child routes.
+
+        (iii) Use createBrowserRouter or Routes and route to define nested routes.
+
+        (iv) When navigating to /child-a or /child-b (child component), the outlet component in parentComponent will render the corresponding child component.
+
+        (v) Add links for navigation using Link from react-router-dom.
+
+Q.2 Read abt createHashRouter, createMemoryRouter from React Router docs.
+
+    -> createHashRouter : 
+        (i) URL Handling : Uses a # fragment in the URL.
+        (ii) Use Case : Static file hosting, avoids server routing.
+        (iii) Example URL : http://example.com/#/child-a
+        (iv) Relies on the browser's hash fragment.
+
+    -> createMemoryRouter :
+        (i) URL Handling : Operates entirely in memory, no URL changes.
+        (ii) Use Case : Testing, SSR, or environment without URL bars.
+        (iii) Example URL : No visible URL change in the browser
+        (iv) Browser Dependency : Does not depend on the browser.
+
+Q.3 What is the order of life cycle method calls in Calss Based components
+
+    (i) Constructor() : all the props, states with initial values will be in constructor
+
+    (ii) Render() : the basic layout of the component will be prepared in the render method.
+
+    (iii) componentDidMount() : once the render method completes and actual dom is created then the API's call happens in the componentDidMount method
+
+    <-- Above three are the Mounting Part of Life cycle -->
+
+    (iv) ComponentDidUpdate() : if we want to update the component layout due to state variable changes or props changes the it takes two parameters prevProps and prevStates and by the if else statement componentDidMount updates the component layout.
+
+    <-- Above method is the Updating part of Life cycle -->
+
+    (v) componentWillUnmount() : this method calls when we changes the component from the UI. if we have something like setInterval in the componentDidMount and if we leave the component or swith to another page then also the setInterval executes properly. so to stop this behaviour we will put clearInterval in this method.
+
+Q.4 why do we use componentDidMount
+
+    -> It is a method in life cycle of class based component
+
+    -> It calls after the render method. If there are multiple components then there componentDidMount calls seprately in a batch after there constructor and render method calls.
+
+    -> Majorly it is used for API'S calls.
+
+Q.5 Why do we use componentWillUnmount? show with example.
+
+    -> We use componentWillUnmount so that we can unmount some the things which can be make effect on the website even after switching to another component.
+
+    -> It is for optimise purpose.
+
+    -> For example: 
+
+        componentDidMount(){
+            this.timer = setInterval(()=>{
+                console.log("Hello world")
+            },1000)
+        }
+
+        componentWillUnmount(){
+            clearInterval(this.timer);
+        }
+
+Q.6  Why do we use super(props) in constructor?
+
+    -> We use super(props) in a class component's constructor in React to call the constructor of the parent class (React.Component) and initialize the component properly. Passing props to super() ensures that this.props is defined and accessible in the constructor.
+
+Q.7 Why can't we have the callback function of useEffect async?
+
+    -> The useEffect callback cannot be async because it must return either undefined or a cleanup function, not a promise. Making it async would cause it to implicitly return a promise, which react cannot handle for cleanup purpose. Instead, use a inner async function within useEffect.
+    
+
+
+
+

@@ -79,3 +79,8 @@
 .search-btn{
     margin: 10px;
 }
+
+.user-card{
+    border: 1px solid black;
+    padding: 10px;
+}
