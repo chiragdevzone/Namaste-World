@@ -1,0 +1,39 @@
+Q.1 When and why do we need lazy()?
+
+    -> When we have large scale application and we want to do chunking or dynamic bundling then we use lazy method provided by react.
+
+    -> We use lazy methods to do optimisation of the app. the files are called only if needed.
+
+Q.2 What is Suspense?
+
+    -> Suspense is the component which is provided by the react library. 
+
+    -> It is used to show placeholder until the real component loads on the screen. somthing like shimmer ui is passed in the fallback attribute of Suspense.
+
+Q.3 Why we got this error : A component suspended while responding to
+synchronous input. This will cause the UI to be replaced with a loading indicator.
+To fix, updates that suspend should be wrapped with startTransition? How does
+suspense fix this error?
+
+    -> We got this error because lazy component takes time to load on the screen but react is very fast due to which it does'nt find any file of lazy component and error is occured again and again.
+
+    -> Suspense is the component provided by the react which help us to show loading screen until lazy component gots loaded into our app. there is a fallback attribute in the suspense in which we can pass any piece of JSX or shimmer ui.
+
+
+Q.4 Advantages and disadvantages of using this code splitting pattern?
+
+    -> Advantages: 
+        
+        * Loads additional code only when needed, improve peformance.
+        * Reduce initial load time by loading only essential code.
+
+    -> disadvantages: 
+
+        * Too many small chunks may lead to increased HTTP requests.
+        * Debugging can become harder due to dynamic imports and chunk sepration.
+
+Q.5 When do we and why do we need suspense?
+
+    -> To show fallback UI while waiting for resources or to handle loading states seamlessly.
+
+    -> To make better user Experience it ensures smooth transitions with a built-in fallback UI and get rid of unwanted errors.

@@ -1,4 +1,3 @@
-import { CDN_URL } from "../utils/constants";
 import { RES_IMG_URL } from "../utils/constants";
 
 const RestroCard = (props) => {

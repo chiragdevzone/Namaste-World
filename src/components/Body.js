@@ -1,31 +1,23 @@
 import RestroCard from "./RestroCard";
 import { useEffect, useState } from "react";
-import { CDN_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useApiData from "../utils/useApiData";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
-  const [resturant, setResturant] = useState([]);
+  const onlineStatus = useOnlineStatus();
+  const resturant = useApiData();
   const [filteredResturant, setFilteredResturant] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    setFilteredResturant(resturant);
+  }, [resturant]);
 
-  const fetchData = async () => {
-    const data = await fetch(CDN_URL);
+  if (onlineStatus === false)
+    return <h1>Looks like you have lost your internet connection..!!</h1>;
 
-    const jsonData = await data.json();
-    console.log(jsonData);
-
-    const apiData =
-      jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-
-    setResturant(apiData);
-    setFilteredResturant(apiData);
-  };
   if (resturant.length === 0) {
     return <Shimmer />;
   }
