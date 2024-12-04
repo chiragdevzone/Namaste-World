@@ -1,0 +1,29 @@
+Q.1 Explore all the ways of writing css.
+
+    (i) Normal CSS in index.css
+    (ii) SASS/SCSS : The plane CSS with some super powers (not recommended)
+    (iii) Styled-components : A components library
+    (iV) MUI(Material UI) : The React components library
+    (v) Bootstrap: Open source CSS framework
+    (vi) Chakra UI : components library of React
+    (vii) Ant Design : React UI components library
+    (viii) Tailwind CSS : Utility first CSS framework
+
+Q.2 How o we configure tailwind?
+
+    -> We should configure tailwind on the basis of builders we use and follow the steps given by the tailwind on there website.
+
+Q.3 In tailwind.config.js, what does all the keys mean (content, theme, extend,
+plugins)?
+
+    -> Content : Specifies files Tailwind scans for class names to generate styles.
+
+    -> Theme : Sets default design tokens ( colors, spacing, etc.).
+
+    -> Extend : Adds or modifies the default theme without overriding it.
+
+    -> Plugins : Adds custom or third-party Tailwind plugins.
+
+Q.4 Why do we have .postcssrc file?
+
+    -> This file configures PostCSS plugins which helps to transform tailwind classes to CSS efficiently.
