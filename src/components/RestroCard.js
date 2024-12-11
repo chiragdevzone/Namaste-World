@@ -30,3 +30,18 @@ const RestroCard = (props) => {
 };
 
 export default RestroCard;
+
+//Higher order component
+
+export const withClosedLabel = (RestroCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-red-400 px-4 text-sm font-semibold">
+          Closed
+        </label>
+        <RestroCard {...props} />
+      </div>
+    );
+  };
+};

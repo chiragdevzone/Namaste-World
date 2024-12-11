@@ -1,0 +1,19 @@
+Q.1 What is prop drilling ?
+
+    -> Prop drilling occurs when a parent component passes data down to its children and then those children pass he same data down to their own children.
+
+Q.2 What is lifting the state up?
+
+    -> It is a concept in React that involves moving the state of a component higher up in the component tree
+
+    -> Ex : Making all the accordian closed while one is open
+
+Q.3 What is Context Provider and Context Consumer?
+
+    -> Context Provider : Supplies a value to all components within its tree. Defined using <MyContext.Provider value={...} >
+
+    -> Context Consumer : Accesses the value provided by the context. Used with <Mycontext.Consumer> or useContext(MyContext) hook.
+
+Q.4 If you don’t pass a value to the provider does it take the default value?
+
+    -> Yes, if you don't pass a value to the Provider, the context will fall back to its default value, which is defined when you create the context using React.createContext().

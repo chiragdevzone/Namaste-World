@@ -10,7 +10,6 @@ const useRestorInfo = (id) => {
   const resInfo = async () => {
     const data = await fetch(RES_INFO_URL + id);
     const json = await data.json();
-    console.log(json);
 
     setResData(json.data);
   };

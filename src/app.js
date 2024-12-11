@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,13 +9,28 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import LoginForm from "./components/LoginForm";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/UserContext";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    //fetch data and send Id and password
+
+    const data = {
+      name: "Akshay saini",
+    };
+
+    setUserName(data.name);
+  }, []);
+
   return (
     <div>
-      <Header />
-      <Outlet />
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <Header />
+        <Outlet />
+      </UserContext.Provider>
     </div>
   );
 };
