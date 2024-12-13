@@ -1,4 +1,4 @@
-import ItemList from "./ItemList";
+import { InhancedItemList } from "./ItemList";
 
 const RestroCategory = ({ data, showList, setShowIndex }) => {
   const handleClick = () => {
@@ -19,7 +19,7 @@ const RestroCategory = ({ data, showList, setShowIndex }) => {
 
       {showList &&
         data.card.card.itemCards.map((card) => (
-          <ItemList key={card.card.info.id} data={card} />
+          <InhancedItemList key={card.card.info.id} data={card} />
         ))}
     </div>
   );

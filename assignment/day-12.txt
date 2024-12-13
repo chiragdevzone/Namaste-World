@@ -1,0 +1,39 @@
+Q.1 useContext vs Redux ?
+
+    -> Both are used to manage the states inside the app .
+    -> useContext is provided by the react itself to manage the states.
+    -> Redux is exteral js library which is also used to manage the states.
+
+Q.2 Advantage of using Redux Toolkit over Redux ?
+
+    -> Redux is also known as vanilla redux which means it is older way of using redux and that is very complicated to use for developers.
+
+    -> Redux toolkit (RTK) is the new way of using redux and we use another library "react-redux" which works as a bridge to connect our react app to the RTK. 
+
+    -> In RTK we can mutate state and no need of returning it where as in vanilla redux we cant mutate the state and have to return it also.
+
+    -> Earlier we have to make a new state and then change it, now RTK uses 'Immer' library which manage it behind the seen. developers don't have to worry about it.
+
+Q.3 Explain Dispatcher?
+
+    -> Dispatcher is used to dispatch an action so that it can call the reducer function and update the store.
+
+    -> It uses useDispatch hook provided by 'react-redux' to dispatch an action.
+
+Q.4 Explain Reducer? 
+
+    -> Reducer is the big object which contains small small reducers which are used to update the store .
+
+Q.5 Explain Selector ?
+
+    -> Selector is used to subscribe the state so that if there is any update then it should automatically reflect to the UI.
+
+    -> It uses useSelector hook to subscribe the store which is provided by the 'react-redux' library.
+
+Q.6 Explain createSlice and the configuration it takes.
+
+    -> createSlice is used to create a new slice to the store .
+
+    -> It is imported from RTK library.
+
+    -> It takes some of the configuration like name of the slice, object of initial state, and the object of reducers.

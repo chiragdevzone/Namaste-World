@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import About from "./components/About";
+import Cart from "./components/Cart";
 import RestroInfo from "./components/RestroInfo";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Error from "./components/Error";
@@ -10,6 +11,8 @@ import Contact from "./components/Contact";
 import LoginForm from "./components/LoginForm";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
@@ -27,10 +30,12 @@ const AppLayout = () => {
 
   return (
     <div>
-      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-        <Header />
-        <Outlet />
-      </UserContext.Provider>
+      <Provider store={appStore}>
+        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+          <Header />
+          <Outlet />
+        </UserContext.Provider>
+      </Provider>
     </div>
   );
 };
@@ -60,6 +65,10 @@ const appRouter = createBrowserRouter(
         {
           path: "/login",
           element: <LoginForm />,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
         },
         {
           path: "/grocery",

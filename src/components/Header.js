@@ -3,10 +3,15 @@ import * as fixed from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [loginbtn, setLoginBtn] = useState("Login");
   const onlineStatus = useOnlineStatus();
+
+  const cartItems = useSelector((state) => state.cart.items);
+
+  console.log(cartItems);
 
   const { loggedInUser } = useContext(UserContext);
 
@@ -30,7 +35,7 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className="mx-4">
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart - ({cartItems.length})</Link>
           </li>
           <li className="mx-4">
             <Link to="/grocery">Grocery</Link>
