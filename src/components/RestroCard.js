@@ -16,7 +16,7 @@ const RestroCard = (props) => {
         Rating
         <span
           className={`${
-            avgRating >= 4
+            avgRating >= 4.5
               ? "text-green-500 border-[2px] border-green-500 rounded-sm px-4"
               : "text-yellow-500 border-[2px] border-yellow-500 rounded-sm px-4"
           }  mx-2 `}

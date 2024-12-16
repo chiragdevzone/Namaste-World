@@ -1,10 +1,7 @@
 const Grocery = () => {
   return (
     <>
-      <h1>
-        Hello guys this is Grocery store . and here we are implementing lazy
-        loading ...!!!
-      </h1>
+      <h1 className="text-center font-bold text-2xl">Coming Soon</h1>
     </>
   );
 };

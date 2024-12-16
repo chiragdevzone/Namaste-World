@@ -1,7 +1,5 @@
 import { Component } from "react";
-import User from "./User";
-import UserClass from "./UserClass";
-import UserContext from "../utils/UserContext";
+import { LOGO_URL } from "../utils/constants";
 
 class About extends Component {
   constructor(props) {
@@ -17,16 +15,26 @@ class About extends Component {
     console.log("parent render called");
 
     return (
-      <div>
-        <h1>This is About us page</h1>
-
-        <UserContext.Consumer>
-          {({ loggedInUser }) => <h1>{loggedInUser}</h1>}
-        </UserContext.Consumer>
-
-        <h2>This is Namaste React Webseries</h2>
-        <User name="chirag sankhla" location="Kotputli ( Function )" />
-        <UserClass name="first (Class)" location="kotputli ( Class )" />
+      <div className="w-8/12 m-auto flex justify-between mt-4">
+        <div className="w-3/12">
+          <img src={LOGO_URL} />
+        </div>
+        <div className="w-9/12 p-4 text-sm">
+          <p>
+            Welcome to The Flavor Junction, where every meal is a celebration of
+            taste, quality, and passion. Our mission is to bring the world of
+            flavors to your plate, offering a diverse menu that caters to every
+            palate. At The Flavor Junction, we believe that food is more than
+            sustenance—it's an experience. From comforting classics to
+            adventurous new dishes, our chefs are dedicated to crafting meals
+            that delight your senses. We source fresh, high-quality ingredients
+            to ensure every bite is as delightful as the last. Whether you're
+            here for a casual meal, a special occasion, or just to explore new
+            tastes, our goal is to make your dining experience unforgettable.
+            Thank you for choosing The Flavor Junction—let’s create delicious
+            memories together!
+          </p>
+        </div>
       </div>
     );
   }
