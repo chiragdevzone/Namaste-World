@@ -1,0 +1,27 @@
+Q.1 What are different types for testing?
+
+    -> There are three typex of testig 
+
+        (i) Unit testing : in which we test only one component which does not depends on any other component(single component only).
+
+        (ii) Intigration testing : in which we test multiple components which depends on each other (multiple component).
+
+        (iii) End to End (e2e) : in which we test different different flows from the user lands to the page to the user exits the page.
+
+Q.2 What is Enzyme?
+
+    -> Enzyme is a React testing library by Airbnb that helps test components by rendering, simulating interactions, and asserting output. It’s now outdated and often replaced by React Testing Library.
+
+Q.3  Enzyme vs React Testing Library
+
+    -> Enzyme: Focuses on testing component implementation details using shallow, mount, and full DOM rendering.
+
+    -> React Testing Library: Focuses on testig user interactions and behavior, encouraging tests based on how users interact with the UI.
+
+    -> React Testing Library is modern, widely adopted, and aligned with React's future, while Enzyme is outdated.
+
+Q.4 What is Jest and why do we use it?
+
+    -> Jest is a JS testig framework by Meta, used for testing React apps and other js code.
+
+    -> It's fast, supports mocking, snapshots, and code coverage, and works seamlessly with tools like React Testing Library for reliable tests.

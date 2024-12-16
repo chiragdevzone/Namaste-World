@@ -29,6 +29,7 @@ const Body = () => {
       <div className="mb-4 flex justify-between">
         <div className="flex">
           <input
+            data-testid="searchInput"
             className="border-black border-2 border-solid px-2 py-1 rounded-md mx-2"
             placeholder="Search Resturant..."
             type="text"
@@ -73,8 +74,10 @@ const Body = () => {
         </div>
       </div>
 
-      <div className=" flex flex-wrap justify-center">
+      <div className=" flex flex-wrap justify-center" data-testid="resCard">
         {filteredResturant.map((resturant) => {
+          console.log(resturant.info);
+
           return (
             <Link
               to={"restaurant/" + resturant.info.id}
